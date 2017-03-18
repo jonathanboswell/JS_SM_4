@@ -1,0 +1,7 @@
+.reveal section img { background:none; border:none; box-shadow:none; }
+
+img[alt=heart] { height: 600px; }
+img[alt=love_do] { height: 400px; }
+img[alt=emotional_cycle] { background: rgba(0, 0, 0, .75)!important;  }
+img[alt=functional] { height: 400px; }
+img[alt=webstack] { background: rgba(255, 255, 255, .2)!important;  }

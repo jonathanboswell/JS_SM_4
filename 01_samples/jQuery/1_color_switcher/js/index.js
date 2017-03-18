@@ -29,6 +29,9 @@ function reset() {
 */
 
 $('#blueButton').click(function(){
+    var name = "Jonathan";
+    console.log(name);
+    
     $('body').css('backgroundColor','#337ab7');
     $('body').css('color','white');
 });
