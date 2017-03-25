@@ -1,0 +1,10 @@
+body {
+    padding: 8px;
+    text-align: center;
+}
+.text {
+  fill: url(#p-fire);
+  stroke: #330000;
+  stroke-width: 8;
+  stroke-opacity: .5;
+}
