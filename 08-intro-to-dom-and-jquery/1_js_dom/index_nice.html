@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>DOM Practice</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- GA Campuses -->
+            <div class="col-xs-3">
+                <ul id="gaCampuses" class="list-group">
+                    <li class="list-group-item active">GA Campuses</li>
+                    <li class="list-group-item">DC</li>
+                    <li class="list-group-item">NY</li>
+                    <li class="list-group-item">SF</li>
+                    <li class="list-group-item">LA</li>
+                    <li class="list-group-item">HK</li>
+                </ul>
+            </div>
+
+            <!-- Input Form -->
+            <div class="col-xs-3">
+                <form class="form form-inline">
+                    <input id="my-input" class="form-control" />
+                    <input id="my-input-button" class="btn btn-success" type="submit" value="Run button code"/>
+                </form>
+
+            </div>
+
+            <!-- Various Hellos -->
+            <div class="col-xs-6" id="helloContainer">
+                <h1 id="helloStatic" class="alert alert-success">Hello world</h1>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- JavaScript -->
+    <!-- ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster & so DOM is fully loaded -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

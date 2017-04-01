@@ -1,0 +1,10 @@
+body {
+    background-color: #DDD;
+    padding: 10px;
+}
+.text {
+  fill: url(#p-fire);
+  stroke: #330000;
+  stroke-width: 8;
+  stroke-opacity: .5;
+}
