@@ -3,14 +3,14 @@ window.onload = function() {
 
     //**** INJECT INTO THE DOM ****//
     // create an empty HTML tag and add text
-    var h1_tag = document.createElement("h1");
+    var h1_tag = document.createElement("h3");
     var h1_text = document.createTextNode("Hello dynamic world!");
     h1_tag.appendChild(h1_text);
     document.body.appendChild(h1_tag);
 
     
     //**** STYLE THE DOM ****//
-    var style_the_dom = false;
+    var style_the_dom = true;
 
     if(style_the_dom)
     {
@@ -41,8 +41,7 @@ window.onload = function() {
         event.preventDefault();
 
         // Get the value of the input
-        document.getElementById('my-input').value;
-        MyApp.do_something("world");
+        MyApp.do_something(document.getElementById('my-input').value);
     };
 };
 

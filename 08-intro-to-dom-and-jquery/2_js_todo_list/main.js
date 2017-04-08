@@ -1,26 +1,30 @@
-/* Independent Practice
-
-Making a favorites list: DOM manipulation
-
-
-- When the user clicks the submit button, take the value they've typed
-  into the input box and add it to the list (remember: appendChild)
-
-- Also, when a new item is added to the list, clear the input box.
-
-*/
-
 window.onload = function() {
-  // Attach an event listener to when the button is clicked.
+    button = document.getElementById('new-thing-button');
+    //Create an onclick function
+    button.onclick = function(event) {
+        // The preventDefault() method lets us disable the default action
+        event.preventDefault();
 
-  // Inside the function for the button click event, run code when someone clicks the button...
-  // Use event.preventDefault() inside your function or the page will reload whenever you click the button
+        var value = document.getElementById('new-thing').value;
 
-  // https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+        if(value)
+        {
+            //call function below
+            addToList(document.getElementById('fav-list'),value)
+
+            //clear the new-thing
+            document.getElementById('new-thing').value = "";
+        } else {
+            window.alert("You must type in a value!");
+        }
+    };
 };
 
 function addToList(list, newThing) {
-
+    var tag = document.createElement("li");
+    var text = document.createTextNode(newThing);
+    tag.appendChild(text);
+    list.appendChild(tag);
 }
 
 /*

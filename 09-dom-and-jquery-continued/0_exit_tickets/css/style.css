@@ -1,0 +1,38 @@
+body {
+    background-color: #DDD;
+    padding: 10px;
+}
+
+span {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 20px;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.dice-1 {
+  background-image: url('../img/1.png');
+}
+.dice-2 {
+  background-image: url('../img/2.png');
+}
+.dice-3 {
+  background-image: url('../img/3.png');
+}
+.dice-4 {
+  background-image: url('../img/4.png');
+}
+.dice-5 {
+  background-image: url('../img/5.png');
+}
+.dice-6 {
+  background-image: url('../img/6.png');
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+

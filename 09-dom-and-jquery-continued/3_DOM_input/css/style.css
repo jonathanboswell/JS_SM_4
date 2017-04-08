@@ -1,0 +1,19 @@
+body {
+  background: #EEE;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 3em;
+  padding: 0;
+}
+form {
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin: 3px;
+}
+.list-group-item {
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}

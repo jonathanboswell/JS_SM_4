@@ -7,15 +7,19 @@ var car = {
     'speed': 0
 }
 
-var myCar = car;
+var myCar = new car();
 var answer = "";
 
 console.log("Is my car driving?");
 answer = (myCar.is_driving) ? "yes":"no";
 console.log(answer)
 
-var yourCar = car;
+var yourCar = new car();
 myCar.is_driving = true;
 console.log("Is YOUR car driving?");
 answer = (yourCar.is_driving) ? "yes":"no";
+console.log(answer)
+
+console.log("Is my car driving?");
+answer = (myCar.is_driving) ? "yes":"no";
 console.log(answer)
