@@ -6,10 +6,8 @@ $(function(){
         sayHello()
 
         //can you pass sayHello a name and have it output "Hello " + name?
-        sayHello("Michael Bolton");
 
         //can you create a function sayGoodbye()?
-        sayGoodbye();
 
         //can you create a function say() that takes TWO parameters: name and greeting
         // where you can pass a name and a greeting and it will say like "Hello Jonathan"
@@ -25,10 +23,4 @@ $(function(){
             $('#output').append("Hello " + name + "\n");
         }
     }
-
-    function sayGoodbye()
-    {
-        $('#output').append("Goodbye\n");
-    }
-
 });

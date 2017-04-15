@@ -25,7 +25,7 @@ $(function(){
         showArrays(weekdays, weekends, days);
     });
 
-    //Custome functions to show you the arrays above
+    //Custom functions to show you the arrays above
     function showArrays(weekdays, weekends, days)
     {
         $('#output').text(''); //reset

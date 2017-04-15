@@ -45,7 +45,7 @@ function loadMap(position, keyword) {
         var keyword = "store";
     }
     console.log(keyword);
-    map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map($('#map').get(0), {
       center: position,
       zoom: 15
     });
