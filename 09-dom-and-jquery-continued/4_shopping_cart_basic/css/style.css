@@ -5,3 +5,7 @@ body {
 .img-thumbnail {
     height: 100px;
 }
+
+.badge {
+    margin-right: 8px;
+}

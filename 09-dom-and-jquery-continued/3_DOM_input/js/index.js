@@ -1,5 +1,7 @@
 $(function(){
 
+    $('#shoppingList').append('<button class="item btn btn-lg btn-success">Power Crunch Bars</button>');
+
     //##### Injection from input #####
     $('#shoppingForm').submit(function(submitEvent){
         submitEvent.preventDefault();
@@ -21,7 +23,7 @@ $(function(){
 
     // Our first "on" event
     $('#shoppingList').on('click', 'button', function(){
-        //$(this).remove();
+        $(this).remove();
     });
 
 });

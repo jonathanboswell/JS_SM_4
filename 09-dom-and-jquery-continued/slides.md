@@ -61,6 +61,7 @@
 
 ---
 
+<!-- .slide: data-background="../images/background.jpg"-->
 *Keyboard Events*
 - keypress
 - keydown

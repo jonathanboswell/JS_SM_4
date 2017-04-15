@@ -8,24 +8,29 @@ $(function(){
         console.log("I want to make an API request");
 
         $.get("http://headshot.mockable.io/menu", function(response) {
-            $('.panel-body').html(''); //reset panel body
-            $.each(response, function(meal, items){
+            $('#menu').html(''); //reset menu
 
-                //INJECT the template into the DOM
-                var string = '';
-                string += '<div id="' + meal + '">';
-                string += ' <h3>' + meal + '</h3>';
-                string += ' <ul class="list-group"></ul>';
-                string += '</div>';
-                $('.panel-body').append(string);
+            for(meal in response)
+            {
+                var items = response[meal];
+                var string = "";
 
-                //UPDATE the template with values
-                for(var i = 0; i < items.length; i++)
-                {
-                    $('#' + meal + ' ul').append('<li class="list-group-item">' + items[i] + '</li>');
-                }
-            });
+                string = '<div id="' + meal + '">' + meal + '</div>';
+                $('#menu').append(string);
+
+                $('#' + meal).append("WOOHOOO");
+
+            }
         });
-
     });
 });
+
+
+
+
+
+
+
+
+
+

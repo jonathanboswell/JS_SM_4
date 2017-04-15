@@ -20,7 +20,7 @@ with the date the photo was taken. The first console.log should return the follo
 */
 var items = flickerObj.items;
 for (var i = 0; i < items.length; i++){
-    console.log(items[i].title, items[i].date_taken);
+    console.log(items[i]["title"], items[i]["date_taken"]);
 }
 
 
@@ -30,7 +30,7 @@ for (var i = 0; i < items.length; i++){
 
 var links = [];
 for (var i = 0; i < items.length; i++){
-    links.push(items[i].link);
+    links.push(items[i]["link"]);
 }
 
 
