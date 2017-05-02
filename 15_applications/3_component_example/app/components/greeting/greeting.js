@@ -2,9 +2,10 @@ angular
 .module('app')
 .component('greeting', {
     templateUrl: "components/greeting/greeting.html",
-    // controller: "GreetingController",
-    // controllerAs: "controller"
+    controller: "GreetingController",
+    controllerAs: "c"
 })
 .controller('GreetingController', function() {
-    this.name = "Your name";
+    this.name = "Jonathan";
+    this.yourName = "Harry Potter"
 });

@@ -5,7 +5,7 @@ angular
 
 // Call the .module() function
 // Pass it 2 parameters: the name of the app and an array of libraries/components to include
-.module('myApp', ['ui.router'])
+.module('myApp', ['ui.router','pdf'])
 
 // Call the .config function
 // Pass it an anonymous callback function
@@ -24,4 +24,9 @@ angular
 
   $stateProvider.state(helloState);
   $stateProvider.state(aboutState);
+  $stateProvider.state({
+    name: 'portfolio',
+    url: '/portfolio',
+    template: '<h3>My Portfolio</h3>'
+  });
 });
