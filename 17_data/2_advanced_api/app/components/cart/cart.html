@@ -1,0 +1,8 @@
+<h3>Cart</h3>
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="product in controller.cart.items">
+    {{product.name}} @ {{product.price | currency}} x {{product.count.cart}}
+    <button class="btn btn-xs btn-danger pull-right" ng-click="controller.cart.remove(product)">Remove</button>
+  </li>
+</ul>
+<div>{{controller.cart.total | currency}}</div>

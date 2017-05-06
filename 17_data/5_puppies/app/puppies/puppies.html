@@ -1,0 +1,10 @@
+<div class="container-fluid">
+
+  <div class="row" ng-controller="PuppiesController as controller">
+    <h2>Puppies</h2>
+    <div class="alert alert-success" ng-repeat="puppy in puppies">
+      {{puppy.name}} is a cute {{puppy.breed}}
+    </div>
+  </div>
+
+</div>

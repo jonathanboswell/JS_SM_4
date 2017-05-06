@@ -1,0 +1,53 @@
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.bgimg {
+    background-image: url('images/bg.jpg');
+    background-color: black;
+    /*background-image: url('http://www.lab2beauty.com/App_Themes/Skin_4/img/made-with-love-icon.png');*/
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 25px;
+}
+.logo {
+    margin-left: 30px;
+}
+/* Position text in the top-left corner */
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    font-size: 36px;
+}
+
+/* Position text in the bottom-left corner */
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+/* Position text in the middle */
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0,0,0,.40);
+    padding: 10px;
+}
+
+/* Style the <hr> element */
+hr {
+    margin: auto;
+    width: 40%;
+}
