@@ -15,6 +15,7 @@ angular
     var ProductsFactory = this;
 
     //This is an array of objects
+    /*
     ProductsFactory.inventory = [
       {"name":"shoes", "price": 50, "count": {"stock": 30, "cart": 0}, "reviews": 15, "stars": 5 },
       {"name":"belt", "price": 20, "count": {"stock": 100, "cart": 0}, "reviews": 8, "stars": 3 },
@@ -23,6 +24,7 @@ angular
       {"name":"socks", "price": 8, "count": {"stock":300, "cart": 0}, "reviews": 12, "stars": 4 },
       {"name":"hat", "price": 24, "count": {"stock":50, "cart": 0}, "reviews": 80, "stars": 5 }
     ];
+    */
 
     // Variables for our API call
     var url = 'http://headshot.mockable.io/products';
@@ -30,8 +32,12 @@ angular
       ProductsFactory.inventory = response.data.products;
     }
 
+    var errCallback = function(error) {
+      console.log("ERROR!", error);
+    }
+
     // This is an API call
-    $http.get(url).then(successCallback);
+    $http.get(url).then(successCallback, errCallback);
 
     return ProductsFactory;
 })

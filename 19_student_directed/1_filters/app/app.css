@@ -1,0 +1,7 @@
+/* app css stylesheet */
+body {
+    padding: 10px;
+}
+th {
+  cursor: pointer;
+}

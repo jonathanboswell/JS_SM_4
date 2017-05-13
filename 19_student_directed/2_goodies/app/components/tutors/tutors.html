@@ -1,0 +1,19 @@
+<div class="row">
+  <div ng-class="c.factory.tutor ? 'col-xs-8':'col-xs-12'">
+    <h3>Tutors</h3>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="tutor in c.factory.tutors">
+
+        <button ng-if="c.factory.tutor != tutor" ng-click="c.factory.view(tutor)" class="btn btn-success">
+          {{tutor.name}}
+        </button>
+        <button ng-if="c.factory.tutor == tutor" ng-click="c.factory.close()" class="btn btn-danger">
+          {{tutor.name}}
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div ng-if="c.factory.tutor" class="col-xs-4">
+    <tutor></tutor>
+  </div>
+</div>

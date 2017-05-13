@@ -6,7 +6,7 @@ body, html {
 }
 
 .bgimg {
-    background-image: url('images/bg.jpg');
+    background-image: url('/images/bg.jpg');
     background-color: black;
     /*background-image: url('http://www.lab2beauty.com/App_Themes/Skin_4/img/made-with-love-icon.png');*/
     height: 100%;

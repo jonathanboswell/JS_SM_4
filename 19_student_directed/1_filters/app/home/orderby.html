@@ -1,0 +1,38 @@
+<navbar></navbar>
+<div class="row" ng-controller="HomeController as c">
+
+  <!-- This filter will match ANYWHERE in the name -->
+  <div class="col-xs-6">
+
+    <!-- input -->
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon">Search Term</div>
+        <input type="text" ng-model="anySearchTerm" placeholder="Loose matching">
+      </div>
+    </div>
+
+    <!-- results -->
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th ng-click="c.orderBy('year')">Year</th>
+          <th ng-click="c.orderBy('make')">Make</th>
+          <th ng-click="c.orderBy('model')">Model</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="car in c.CarFactory.cars | filter : {make: anySearchTerm} | orderBy: c.myOrder">
+          <td>{{car.year}}</td>
+          <td>{{car.make}}</td>
+          <td>{{car.model}}</td>
+        </tr>
+        <tr ng-show="(c.CarFactory.cars | filter: {make: anySearchTerm}).length === 0">
+          <td>No results</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

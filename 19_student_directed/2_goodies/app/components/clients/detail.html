@@ -1,0 +1,11 @@
+<h3>
+  Client Detail: {{c.factory.client.name}}
+  <button class="btn btn-danger btn-xs pull-right" ng-click="c.factory.close()">
+    <i class="fa fa-close"></i>
+  </button>
+</h3>
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="place in c.factory.client.places">
+    {{place}}
+  </li>
+</ul>

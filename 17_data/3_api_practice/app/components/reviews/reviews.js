@@ -6,23 +6,33 @@ angular
     controllerAs: "controller",
 })
 .controller('ReviewController', function(ReviewFactory) {
-    this.reviews = ReviewFactory.reviews;
+    this.ReviewFactory = ReviewFactory;
 })
 .factory('ReviewFactory', function($http){
     var ReviewFactory = this;
 
     ReviewFactory.reviews = [];
 
-    var url = 'http://headshot.mockable.io/reviews';
+    ReviewFactory.getData = function()
+    {
+      var url = 'http://headshot.mockable.io/reviews';
+      var successCallback = function(response){
+        ReviewFactory.reviews = response.data.reviews;
+        return response;
+      }
 
-    var successCallback = function(response){
-      // Use the console look at the response
-      console.log(response);
-
-      // !!! Set the ReviewFactory.reviews to equal the correct array in the response
+      return $http.get(url).then(successCallback);
     }
 
-    $http.get(url).then(successCallback);
+    ReviewFactory.reload = function()
+    {
+        return ReviewFactory.getData().then(function(response){
+          ReviewFactory.reviews = response.data.reviews
+          return response;
+        });
+    }
+
+    ReviewFactory.getData();
 
     return ReviewFactory;
 });

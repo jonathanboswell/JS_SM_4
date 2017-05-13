@@ -1,0 +1,11 @@
+<h3>
+  Tutor Detail: {{c.factory.tutor.name}}
+  <button class="btn btn-danger btn-xs pull-right" ng-click="c.factory.close()">
+    <i class="fa fa-close"></i>
+  </button>
+</h3>
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="place in c.factory.tutor.places">
+    {{place}}
+  </li>
+</ul>

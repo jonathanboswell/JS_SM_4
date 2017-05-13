@@ -1,0 +1,47 @@
+<navbar></navbar>
+<div class="row" ng-controller="HomeController as c">
+
+  <!-- This filter will match ANYWHERE in the name -->
+  <div class="col-xs-6">
+
+    <!-- input -->
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon">Search Term</div>
+        <input type="text" ng-model="anySearchTerm" placeholder="Loose matching">
+      </div>
+    </div>
+
+    <!-- results -->
+    <ul class="list-group">
+      <li class="list-group-item active">Names</li>
+      <li class="list-group-item" ng-repeat="name in c.people | filter : anySearchTerm">
+        {{name}}
+      </li>
+      <li class="list-group-item" ng-show="(c.people | filter:anySearchTerm).length === 0">No results</li>
+    </ul>
+
+  </div>
+
+  <!-- This filter will match in the names that BEGIN with the search term -->
+  <div class="col-xs-6">
+
+    <!-- input -->
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon">Search Term</div>
+        <input type="text" ng-model="beginSearchTerm" placeholder="Strict matching">
+      </div>
+    </div>
+
+    <!-- results -->
+    <ul class="list-group">
+      <li class="list-group-item active">Names</li>
+      <li class="list-group-item" ng-repeat="name in c.people | beginsWithFilter:beginSearchTerm">
+        {{ name }}
+      </li>
+      <li class="list-group-item" ng-show="(c.people | beginsWithFilter:beginSearchTerm).length == 0">No results</li>
+    </ul>
+    
+  </div>
+</div>

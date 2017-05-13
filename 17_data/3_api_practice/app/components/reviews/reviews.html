@@ -1,8 +1,12 @@
 <div id="reviews">
-  <h3>Reviews</h3>
+  <h3>reviews
+    <button class="btn btn-success" ng-click="controller.ReviewFactory.reload()">
+      <i class="fa fa-refresh"></i>
+    </button>
+  </h3>
   <div class="row">
-    <div class="col-xs-12" ng-repeat="review in controller.reviews">
-        <!-- !!! Use angular variables to build a template and display the reviews -->
+    <div class="col-xs-12" ng-repeat="review in controller.ReviewFactory.reviews">
+        {{review.content}}
     </div>
   </div>
 </div>
