@@ -15,10 +15,10 @@
     <!-- results -->
     <ul class="list-group">
       <li class="list-group-item active">Names</li>
-      <li class="list-group-item" ng-repeat="name in c.people | filter : anySearchTerm">
+      <li class="list-group-item" ng-repeat="name in c.PeopleFactory.people | filter : anySearchTerm">
         {{name}}
       </li>
-      <li class="list-group-item" ng-show="(c.people | filter:anySearchTerm).length === 0">No results</li>
+      <li class="list-group-item" ng-show="(c.PeopleFactory.people | filter:anySearchTerm).length === 0">No results</li>
     </ul>
 
   </div>
@@ -37,11 +37,11 @@
     <!-- results -->
     <ul class="list-group">
       <li class="list-group-item active">Names</li>
-      <li class="list-group-item" ng-repeat="name in c.people | beginsWithFilter:beginSearchTerm">
+      <li class="list-group-item" ng-repeat="name in c.PeopleFactory.people | beginsWithFilter:beginSearchTerm">
         {{ name }}
       </li>
-      <li class="list-group-item" ng-show="(c.people | beginsWithFilter:beginSearchTerm).length == 0">No results</li>
+      <li class="list-group-item" ng-show="(c.PeopleFactory.people | beginsWithFilter:beginSearchTerm).length == 0">No results</li>
     </ul>
-    
+
   </div>
 </div>
